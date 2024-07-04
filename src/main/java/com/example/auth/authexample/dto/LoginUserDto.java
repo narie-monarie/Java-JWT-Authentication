@@ -1,6 +1,5 @@
 package com.example.auth.authexample.dto;
 
-
 import lombok.Getter;
 import lombok.Setter;
 

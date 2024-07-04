@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 @OpenAPIDefinition(info = @Info(title = "JWT AUTHENTICATION", version = "v1"), security = @SecurityRequirement(name = "Bearer"), servers = {
-        @Server(url = "/", description = "Swagger UI"),
+                @Server(url = "/", description = "Swagger UI"),
 }
 
 )

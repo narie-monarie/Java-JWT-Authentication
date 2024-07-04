@@ -1,6 +1,5 @@
 package com.example.auth.authexample.service;
 
-
 import com.example.auth.authexample.dto.LoginUserDto;
 import com.example.auth.authexample.dto.RegisterUserDto;
 import com.example.auth.authexample.entities.User;
@@ -21,8 +20,7 @@ public class AuthenticationService {
     public AuthenticationService(
             UserRepository userRepository,
             AuthenticationManager authenticationManager,
-            PasswordEncoder passwordEncoder
-    ) {
+            PasswordEncoder passwordEncoder) {
         this.authenticationManager = authenticationManager;
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
@@ -41,9 +39,7 @@ public class AuthenticationService {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         input.getEmail(),
-                        input.getPassword()
-                )
-        );
+                        input.getPassword()));
 
         return userRepository.findByEmail(input.getEmail())
                 .orElseThrow();
